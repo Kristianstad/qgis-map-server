@@ -1,3 +1,3 @@
 FROM 3liz/qgis-map-server
 
-copy docker-entrypoint.sh
+RUN sed -i 's/! -w/! -e/g; s/! -r/! -e/g' docker-entrypoint.sh
